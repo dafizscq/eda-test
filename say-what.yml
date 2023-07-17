@@ -1,0 +1,11 @@
+---
+- name: Say WHAT
+  connection: local
+  become: true
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: "Saying what"
+      ansible.builtin.debug:
+        msg: "What?"
