@@ -5,8 +5,7 @@
   ## Define our source for events
 
   sources:
-    - ansible.eda.webhook:
-        host: 0.0.0.0
+    - ansible.eda.webhook:        
         port: 5000
 
   ## Define the conditions we are looking for
