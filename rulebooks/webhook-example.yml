@@ -16,7 +16,5 @@
       condition: event.payload.message == "Ansible is super cool!"
       ## Define the action we should take should the condition be met
       action:
-#        run_playbook:
-#          name: say-what-playbook.yml
-      debug:
-        msg: "You said, '{{ event.payload.message }}'. Is it me you're looking for?"          
+        debug:
+          msg: "You said, '{{ event.payload.message }}'. Is it me you're looking for?"          
