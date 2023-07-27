@@ -5,7 +5,8 @@
   ## Define our source for events
 
   sources:
-    - ansible.eda.webhook:        
+    - ansible.eda.webhook:
+        host: 0.0.0.0
         port: 50000
 
   ## Define the conditions we are looking for
@@ -15,5 +16,7 @@
       condition: event.payload.message == "Ansible is super cool!"
       ## Define the action we should take should the condition be met
       action:
-        run_playbook:
-          name: say-what-playbook.yml
+#        run_playbook:
+#          name: say-what-playbook.yml
+      debug:
+        msg: "You said, '{{ event.payload.message }}'. Is it me you're looking for?"          
