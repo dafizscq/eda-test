@@ -12,7 +12,7 @@
   ## Define the conditions we are looking for
 
   rules:
-    - name: Say Hello
+    - name: What you said?
       condition: event.payload.message == "Ansible is super cool!"
       ## Define the action we should take should the condition be met
       action:
