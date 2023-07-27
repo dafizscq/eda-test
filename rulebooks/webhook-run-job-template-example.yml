@@ -13,10 +13,10 @@
 
   rules:
     - name: Say Hello World
-      condition: event.payload.message == "Hello World!"
+      condition: event.payload.message == "hello_world"
       ## Define the action we should take should the condition be met
       action:
         run_job_template: 
-          name: Hello World demo EDA
-          organization: Sistemas Linux          
+          name: "Hello World demo EDA"
+          organization: "Sistemas Linux"          
           
