@@ -12,7 +12,7 @@
   ## Define the conditions we are looking for
 
   rules:
-    - name: Say Hello
+    - name: Say Hello World
       condition: event.payload.message == "Hello World!"
       ## Define the action we should take should the condition be met
       action:
