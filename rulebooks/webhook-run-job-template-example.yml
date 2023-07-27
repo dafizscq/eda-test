@@ -12,7 +12,7 @@
   ## Define the conditions we are looking for
 
   rules:
-    - name: Say Hello World
+    - name: Launch job_template hello World demo EDA
       condition: event.payload.message == "hello_world"
       ## Define the action we should take should the condition be met
       action:
