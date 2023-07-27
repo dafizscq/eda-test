@@ -12,9 +12,9 @@
   ## Define the conditions we are looking for
 
   rules:
-    - name: What you said?
+    - name: What do you said?
       condition: event.payload.message == "Ansible is super cool!"
       ## Define the action we should take should the condition be met
       action:
         debug:
-          msg: "You said, '{{ event.payload.message }}'. Is it me you're looking for?"          
+          msg: "You said, '{{ event.payload.message }}'"          
