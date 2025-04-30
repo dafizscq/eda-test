@@ -1,0 +1,15 @@
+---
+- name: Listen for events on a webhook
+  hosts: localhost
+  sources:
+     - ansible.eda.url_check:
+        urls:
+          - http://10.116.6.73
+        delay: 10
+        verify_ssl: false
+  rules:
+    - name: Handle Critical Hosts
+      condition: event.url_check.status == "down"
+      actions:
+        - debug:
+            msg: "Critical issue detected on host"
