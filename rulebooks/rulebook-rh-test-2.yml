@@ -1,0 +1,16 @@
+---
+- name: Listen for chat message trigger-words
+  hosts: localhost
+  
+  sources:
+    - name: Match events posted to port 5000
+      ansible.eda.webhook:
+        host: 0.0.0.0
+        port: 5000
+
+  rules:
+    - name: Print event data
+      condition: true
+      action:
+        print_event:
+          pretty: true
