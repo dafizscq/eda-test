@@ -1,0 +1,22 @@
+---
+- name: Listen for events from Event Streams (builtin variant)
+  hosts: all
+
+  ## Define our source for events
+
+  sources:
+    - eda.builtin.pg_listener:
+        dsn: "{{ eda_pg_dsn }}"
+        channels:
+          - "{{ eda_pg_channel | default('eda_events') }}"
+
+  ## Define the conditions we are looking for
+
+  rules:
+    - name: Launch job_template hello World demo EDA
+      condition: event.payload.message == "hello_world"
+      ## Define the action we should take should the condition be met
+      action:
+        run_job_template:
+          name: "Hello World demo EDA"
+          organization: "Core Linux"
