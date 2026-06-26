@@ -18,5 +18,5 @@
       action:
         run_job_template: 
           name: "Hello World demo EDA"
-          organization: "Sistemas Linux"          
+          organization: "Core Linux"          
           
